@@ -1,11 +1,9 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .recommender.simple_recommender import SimpleRecommender
-import logging
-logging.basicConfig(level=logging.INFO)
+from .recommender.als_recommender import ALSRecommender
 
-model = SimpleRecommender()
+model = ALSRecommender("dataMatrix.csv")
 
 class PredictView(APIView):
     def get(self, request, user_id: int):

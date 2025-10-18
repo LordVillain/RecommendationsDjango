@@ -3,3 +3,5 @@ djangorestframework
 pandas
 numpy
 scikit-learn
+scipy
+implicit
